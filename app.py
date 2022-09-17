@@ -9,8 +9,18 @@ import io
 # Title
 st.title("Multitask GP Model")
 
+"""
+This is a demo of multitask Gaussian processes, which are a key component of [multitask Bayesian optimization](https://en.wikipedia.org/wiki/Multitask_optimization). The sliders below control the data used to train the single task and multitask models.
+"""
+
 # Sliders
-period = st.slider("Period", min_value=2.0, max_value=10.0, value=5.0, step=0.5)
+period = st.slider(
+    "Function Period",
+    min_value=2.0,
+    max_value=10.0,
+    value=5.0,
+    step=0.5,
+)
 n_main = st.slider("Main Task Observations", min_value=0, max_value=50, value=20)
 n_aux = st.slider("Auxiliary Task Observations", min_value=0, max_value=50, value=20)
 
